@@ -40,7 +40,7 @@ coverage-html: gen-coverage
 fmt:
 	@gofumpt -w -l .
 
-	@gci write --section Standard --section Default --section "Prefix(github.com/nikoksr/doppler-go)" .
+	@gci write --section Standard --section Default --section "Prefix(github.com/kperreau/doppler-go)" .
 .PHONY: fmt
 
 lint:

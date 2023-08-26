@@ -11,9 +11,9 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
 
-	"github.com/nikoksr/doppler-go"
-	configlog "github.com/nikoksr/doppler-go/config_log"
-	"github.com/nikoksr/doppler-go/pointer"
+	"github.com/kperreau/doppler-go"
+	configlog "github.com/kperreau/doppler-go/config_log"
+	"github.com/kperreau/doppler-go/pointer"
 )
 
 func TestDefault(t *testing.T) {

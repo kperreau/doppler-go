@@ -14,8 +14,8 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
 
-	"github.com/nikoksr/doppler-go/logging"
-	"github.com/nikoksr/doppler-go/pointer"
+	"github.com/kperreau/doppler-go/logging"
+	"github.com/kperreau/doppler-go/pointer"
 )
 
 func TestAppInfo_formatUserAgent(t *testing.T) {

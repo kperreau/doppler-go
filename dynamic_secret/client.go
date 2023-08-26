@@ -4,7 +4,7 @@ import (
 	"context"
 	"net/http"
 
-	"github.com/nikoksr/doppler-go"
+	"github.com/kperreau/doppler-go"
 )
 
 // Client is the client used to invoke /configs/config/dynamic_secrets/dynamic_secret APIs.

@@ -5,7 +5,7 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 
-	"github.com/nikoksr/doppler-go/pointer"
+	"github.com/kperreau/doppler-go/pointer"
 )
 
 func TestAuthRevokeOptions_MarshalJSON(t *testing.T) {

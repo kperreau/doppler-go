@@ -11,8 +11,8 @@ Example:
 	    package main
 
 	    import (
-	        "github.com/nikoksr/doppler-go"
-		    "github.com/nikoksr/doppler-go/project"
+	        "github.com/kperreau/doppler-go"
+		    "github.com/kperreau/doppler-go/project"
 	    )
 
 			func main() {

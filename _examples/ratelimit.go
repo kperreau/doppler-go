@@ -6,8 +6,8 @@ import (
 	"log"
 	"os"
 
-	"github.com/nikoksr/doppler-go"
-	"github.com/nikoksr/doppler-go/secret"
+	"github.com/kperreau/doppler-go"
+	"github.com/kperreau/doppler-go/secret"
 )
 
 func main() {

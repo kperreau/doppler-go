@@ -10,9 +10,9 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
 
-	"github.com/nikoksr/doppler-go"
-	dynamicsecret "github.com/nikoksr/doppler-go/dynamic_secret"
-	"github.com/nikoksr/doppler-go/pointer"
+	"github.com/kperreau/doppler-go"
+	dynamicsecret "github.com/kperreau/doppler-go/dynamic_secret"
+	"github.com/kperreau/doppler-go/pointer"
 )
 
 func TestDefault(t *testing.T) {

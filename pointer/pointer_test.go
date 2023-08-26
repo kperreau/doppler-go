@@ -3,7 +3,7 @@ package pointer_test
 import (
 	"testing"
 
-	"github.com/nikoksr/doppler-go/pointer"
+	"github.com/kperreau/doppler-go/pointer"
 )
 
 func TestAsPointer(t *testing.T) {

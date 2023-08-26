@@ -7,10 +7,10 @@
 &nbsp;
 
 [![codecov](https://codecov.io/gh/nikoksr/doppler-go/branch/main/graph/badge.svg?token=9KTRRRWM5A)](https://codecov.io/gh/nikoksr/doppler-go)
-[![Go Report Card](https://goreportcard.com/badge/github.com/nikoksr/doppler-go)](https://goreportcard.com/report/github.com/nikoksr/doppler-go)
+[![Go Report Card](https://goreportcard.com/badge/github.com/kperreau/doppler-go)](https://goreportcard.com/report/github.com/kperreau/doppler-go)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/ff90807c42154df9b12a5f03d30a7160)](https://www.codacy.com/gh/nikoksr/doppler-go/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=nikoksr/doppler-go&amp;utm_campaign=Badge_Grade)
 [![Maintainability](https://api.codeclimate.com/v1/badges/8d58f3077a2b6ee2ac57/maintainability)](https://codeclimate.com/github/nikoksr/doppler-go/maintainability)
-[![go.dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat)](https://pkg.go.dev/github.com/nikoksr/doppler-go)
+[![go.dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat)](https://pkg.go.dev/github.com/kperreau/doppler-go)
 </div>
 
 &nbsp;
@@ -46,7 +46,7 @@ If you find any bugs or have any suggestions, please open an issue or a pull req
 ## Install <a id="install"></a>
 
 ```sh
-go get -u github.com/nikoksr/doppler-go
+go get -u github.com/kperreau/doppler-go
 ```
 
 ## Example usage <a id="usage"></a>
@@ -59,8 +59,8 @@ import (
   "fmt"
   "log"
 
-  "github.com/nikoksr/doppler-go"
-  "github.com/nikoksr/doppler-go/secret"
+  "github.com/kperreau/doppler-go"
+  "github.com/kperreau/doppler-go/secret"
 )
 
 func main() {
@@ -85,8 +85,8 @@ func main() {
 ## Contributing <a id="contributing"></a>
 
 Contributions of all kinds are very welcome! Feel free to check
-our [open issues](https://github.com/nikoksr/doppler-go/issues). Please also take a look at
-the [contribution guidelines](https://github.com/nikoksr/doppler-go/blob/main/CONTRIBUTING.md).
+our [open issues](https://github.com/kperreau/doppler-go/issues). Please also take a look at
+the [contribution guidelines](https://github.com/kperreau/doppler-go/blob/main/CONTRIBUTING.md).
 
 ## Show your support <a id="support"></a>
 

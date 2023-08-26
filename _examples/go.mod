@@ -1,8 +1,8 @@
-module github.com/nikoksr/doppler-go/_examples
+module github.com/kperreau/doppler-go/_examples
 
 go 1.19
 
-require github.com/nikoksr/doppler-go v0.3.0
+require github.com/kperreau/doppler-go v0.3.0
 
 require (
 	github.com/go-playground/locales v0.14.0 // indirect

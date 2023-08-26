@@ -5,9 +5,9 @@ import (
 	"log"
 	"os"
 
-	"github.com/nikoksr/doppler-go"
-	"github.com/nikoksr/doppler-go/pointer"
-	"github.com/nikoksr/doppler-go/project"
+	"github.com/kperreau/doppler-go"
+	"github.com/kperreau/doppler-go/pointer"
+	"github.com/kperreau/doppler-go/project"
 )
 
 func main() {

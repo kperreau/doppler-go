@@ -14,8 +14,8 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/nikoksr/doppler-go/logging"
-	"github.com/nikoksr/doppler-go/pointer"
+	"github.com/kperreau/doppler-go/logging"
+	"github.com/kperreau/doppler-go/pointer"
 )
 
 const (

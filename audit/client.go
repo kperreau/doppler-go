@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/nikoksr/doppler-go"
+	"github.com/kperreau/doppler-go"
 )
 
 // Client is the client used to invoke /v3/configs/config/secrets APIs.

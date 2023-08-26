@@ -10,9 +10,9 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
 
-	"github.com/nikoksr/doppler-go"
-	"github.com/nikoksr/doppler-go/pointer"
-	"github.com/nikoksr/doppler-go/workplace"
+	"github.com/kperreau/doppler-go"
+	"github.com/kperreau/doppler-go/pointer"
+	"github.com/kperreau/doppler-go/workplace"
 )
 
 func TestDefault(t *testing.T) {

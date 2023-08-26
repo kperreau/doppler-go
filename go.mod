@@ -1,4 +1,4 @@
-module github.com/nikoksr/doppler-go
+module github.com/kperreau/doppler-go
 
 go 1.21
 

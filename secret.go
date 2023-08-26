@@ -3,14 +3,14 @@ package doppler
 type (
 	// SecretValue represents a single Doppler secret value.
 	SecretValue struct {
-		Raw      *string `json:"raw,omitempty"`      // The raw value of the secret.
-		Computed *string `json:"computed,omitempty"` // The computed value of the secret.
+		Raw      string `json:"raw,omitempty"`      // The raw value of the secret.
+		Computed string `json:"computed,omitempty"` // The computed value of the secret.
 	}
 
 	// Secret represents a single Doppler secret, including its name and value.
 	Secret struct {
-		Name  *string      `json:"name,omitempty"`  // The name of the secret.
-		Value *SecretValue `json:"value,omitempty"` // The value of the secret.
+		Name  string      `json:"name,omitempty"`  // The name of the secret.
+		Value SecretValue `json:"value,omitempty"` // The value of the secret.
 	}
 
 	// SecretGetResponse represents a response from the secrets get endpoint.
@@ -20,7 +20,7 @@ type (
 	// Docs:     https://docs.doppler.com/reference/config-secret-retrieve
 	SecretGetResponse struct {
 		APIResponse `json:",inline"`
-		Secret      *Secret `json:"secret,inline"`
+		Secret      `json:",inline"`
 	}
 
 	// SecretGetOptions represents options for the secrets get endpoint.

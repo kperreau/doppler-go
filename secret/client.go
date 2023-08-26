@@ -22,7 +22,7 @@ func Default() *Client {
 	}
 }
 
-func (c Client) get(ctx context.Context, opts *doppler.SecretGetOptions) (*doppler.Secret, doppler.APIResponse, error) {
+func (c Client) get(ctx context.Context, opts *doppler.SecretGetOptions) (doppler.Secret, doppler.APIResponse, error) {
 	var resp doppler.SecretGetResponse
 	err := c.Backend.Call(ctx, &doppler.Request{
 		Method:  http.MethodGet,
@@ -35,12 +35,12 @@ func (c Client) get(ctx context.Context, opts *doppler.SecretGetOptions) (*doppl
 }
 
 // Get returns a config secret and its respective info.
-func (c Client) Get(ctx context.Context, opts *doppler.SecretGetOptions) (*doppler.Secret, doppler.APIResponse, error) {
+func (c Client) Get(ctx context.Context, opts *doppler.SecretGetOptions) (doppler.Secret, doppler.APIResponse, error) {
 	return c.get(ctx, opts)
 }
 
 // Get returns a config secret and its respective info using the default client.
-func Get(ctx context.Context, opts *doppler.SecretGetOptions) (*doppler.Secret, doppler.APIResponse, error) {
+func Get(ctx context.Context, opts *doppler.SecretGetOptions) (doppler.Secret, doppler.APIResponse, error) {
 	return Default().Get(ctx, opts)
 }
 

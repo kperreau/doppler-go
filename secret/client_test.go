@@ -39,7 +39,7 @@ func TestSecret_Get(t *testing.T) {
 	tests := []struct {
 		name         string
 		options      *doppler.SecretGetOptions
-		wantSecret   *doppler.Secret
+		wantSecret   doppler.Secret
 		wantResponse doppler.APIResponse
 		wantErr      bool
 	}{
@@ -50,11 +50,11 @@ func TestSecret_Get(t *testing.T) {
 				Config:  "my-config",
 				Name:    "my-secret",
 			},
-			wantSecret: &doppler.Secret{
-				Name: pointer.To("test"),
-				Value: &doppler.SecretValue{
-					Raw:      pointer.To("value1"),
-					Computed: pointer.To("value1"),
+			wantSecret: doppler.Secret{
+				Name: "test",
+				Value: doppler.SecretValue{
+					Raw:      "value1",
+					Computed: "value1",
 				},
 			},
 			wantResponse: doppler.APIResponse{
@@ -71,11 +71,11 @@ func TestSecret_Get(t *testing.T) {
 				Config:  "my-config",
 				Name:    "unknown-secret",
 			},
-			wantSecret: &doppler.Secret{
-				Name: pointer.To("test"),
-				Value: &doppler.SecretValue{
-					Raw:      pointer.To("value1"),
-					Computed: pointer.To("value1"),
+			wantSecret: doppler.Secret{
+				Name: "test",
+				Value: doppler.SecretValue{
+					Raw:      "value1",
+					Computed: "value1",
 				},
 			},
 			wantResponse: doppler.APIResponse{
@@ -89,7 +89,7 @@ func TestSecret_Get(t *testing.T) {
 		{
 			name:         "Get secret with options validation error",
 			options:      &doppler.SecretGetOptions{},
-			wantSecret:   nil,
+			wantSecret:   doppler.Secret{},
 			wantResponse: doppler.APIResponse{},
 			wantErr:      true,
 		},
@@ -105,6 +105,7 @@ func TestSecret_Get(t *testing.T) {
 			ts := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 				// Write the expected response to the ResponseWriter.
 				w.Header().Set("Content-Type", "application/json")
+				fmt.Println(tt.wantResponse.StatusCode)
 				w.WriteHeader(tt.wantResponse.StatusCode)
 				err := json.NewEncoder(w).Encode(&doppler.SecretGetResponse{
 					Secret:      tt.wantSecret,
@@ -163,8 +164,8 @@ func TestSecret_List(t *testing.T) {
 				IncludeDynamic: pointer.To(true),
 			},
 			wantSecrets: map[string]*doppler.SecretValue{
-				"test":  {Raw: pointer.To("value1"), Computed: pointer.To("value1")},
-				"test2": {Raw: pointer.To("value2"), Computed: pointer.To("value2")},
+				"test":  {Raw: "value1", Computed: "value1"},
+				"test2": {Raw: "value2", Computed: "value2"},
 			},
 			wantResponse: doppler.APIResponse{
 				Success:    pointer.To(true),

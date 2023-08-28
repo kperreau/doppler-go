@@ -44,6 +44,7 @@ type (
 	SecretListOptions struct {
 		Project           string  `url:"project" json:"-"`                           // The name of the project containing the secret.
 		Config            string  `url:"config" json:"-"`                            // The name of the config containing the secret.
+		IncludeManaged    *bool   `url:"include_managed_secrets,omitempty" json:"-"` // Whether to include managed secrets.
 		IncludeDynamic    *bool   `url:"include_dynamic_secrets,omitempty" json:"-"` // Whether to include dynamic secrets.
 		DynamicTTLSeconds *int32  `url:"dynamic_secrets_ttl_sec,omitempty" json:"-"` // The number of seconds until dynamic leases expire. Must be used with include_dynamic_secrets.
 		Secrets           *string `url:"secrets,omitempty" json:"-"`                 // A comma-separated list of secret names to include.
@@ -74,6 +75,7 @@ type (
 	SecretDownloadOptions struct {
 		Project           string  `url:"project" json:"-"`                           // The name of the project containing the secret.
 		Config            string  `url:"config" json:"-"`                            // The name of the config containing the secret.
+		IncludeManaged    *bool   `url:"include_managed_secrets,omitempty" json:"-"` // Whether to include managed secrets.
 		IncludeDynamic    *bool   `url:"include_dynamic_secrets,omitempty" json:"-"` // Whether to include dynamic secrets.
 		DynamicTTLSeconds *int32  `url:"dynamic_secrets_ttl_sec,omitempty" json:"-"` // The number of seconds until dynamic leases expire. Must be used with include_dynamic_secrets.
 		Format            *string `url:"format,omitempty" json:"-"`                  // The format to download the secrets in. See official docs for supported formats.
